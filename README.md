@@ -1,3 +1,5 @@
 # aoellerm2.github.io
-For my CIS300 work
-Creating a website for CIS300
+# https://github.com/aoellerm/aoellerm2.github.io
+git add .
+git commit -m "hi"
+git push 
