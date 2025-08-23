@@ -1,15 +1,23 @@
  body{
-    height: 100vh;
     background: linear-gradient(
-      to top,
       #DFA9FF 0%,
       #DFA9FF 50%,
       #B454FF 50%,
       #B454FF 100%
     );
-     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
+ };
+
+ nav > ul > li { 
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+    font-size: 1.2em;
+    font-family: 'Abhaya Libre ExtraBold';
+    color: #706677;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    border-radius: 5px;
   }
