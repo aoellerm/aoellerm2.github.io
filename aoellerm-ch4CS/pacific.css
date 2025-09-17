@@ -12,6 +12,9 @@ nav {
 h2 {
     color: #1976D2
 }
+h1 {
+    margin-bottom: 0;
+}
 dt {
     color: #002171;
 }
