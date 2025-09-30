@@ -1,6 +1,16 @@
+#wrapper {
+    width: 80%;
+    min-width: 960px;
+    max-width: 2048px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    box-shadow: 3px 3px 3px #333333;
+}
 body {
-    background-color: white;
     color: #555555;
+    background-color: #90C7E3;
+    background: linear-gradient(white,#90C7E3);
+    background-repeat: no-repeat;
 }
 p {
     font-family: Arial, Helvetica, sans-serif;
@@ -9,14 +19,42 @@ header {
     background-image: url("sunset.jpg");
     background-position: right;
     background-repeat: no-repeat;
-    line-height: 400%;
-    text-indent: 1em;
+    height: 60px;
+    text-align: center;
+    padding-top: 15px;
     background-color: #002171;
     color: #FFFFFF;
 }
 nav {
-    background-color: #BBDEFB;
+    background-color: white;
+    padding: 1em;
+    text-align: center;
     font-weight: bold;
+}
+#homehero {
+    height: 300px;
+    background-image: url('coast.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#yurthero {
+    height: 300px;
+    background-image: url('yurt.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#trailhero {
+    height: 300px;
+    background-image: url('trail.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+main {
+    padding-top: 1px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    display: block;
 }
 ul {
     list-style-image: url(marker.gif);
@@ -27,17 +65,16 @@ a {
 h1 {
     font-family: Georgia, 'Times New Roman', serif;
     margin-bottom: 0;
+    margin-top: 0;
 }
 h2 {
     font-family: Georgia, 'Times New Roman', serif;
-    color: #1976D2
+    text-shadow: 1px 1px 0 #CCCCCC;
+    color: #1976D2;
 }
 h3 {
     font-family: Georgia, 'Times New Roman', serif;
     color: #000033;
-}
-#contact {
-    font-size: 90%;
 }
 dt {
     color: #002171;
@@ -46,7 +83,11 @@ dt {
     font-weight: bold;
     color: #1976D2;
 }
+#contact {
+    font-size: 90%;
+}
 footer {
+    padding: 2em;
     font-size: 75%;
     font-style: italic;
     text-align: center;
