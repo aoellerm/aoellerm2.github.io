@@ -2,31 +2,20 @@
     box-sizing: border-box;
 }
 #wrapper {
-    width: 80%;
-    min-width: 960px;
-    max-width: 2048px;
-    margin: 0 auto;
     background-color: #90C7E3;
      background-image: linear-gradient(to bottom, white,#90C7E3);
-    box-shadow: 3px 3px 3px #333333;
-    border: 1px solid #000033;
-
 }
 body {
     background-color: #EAEAEA;
 }
-section {
-    float: left; 
-    width: 33%; 
-    padding-left: 2em; 
-    padding-right: 2em;
-}
+
 p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
-    line-height: 120px; 
+    grid-area: header;
+    line-height: 100px; 
     padding-left: 3em; 
     padding-top: 30px;
     background-color: #002171; 
@@ -44,10 +33,10 @@ header a:hover {
 color: #90C7E3
 }
 nav {
-    float: left;
-    width: 160px;
+    grid-area: nav;
+    text-align: center;
     font-size: 120%;
-    padding: 1.5em;
+    padding: 0;
     font-weight: bold;
 }
 nav ul {
@@ -55,6 +44,9 @@ nav ul {
     margin: 0;
     padding-left: 0;
     font-size: 1.2em;
+}
+nav li {
+    border-bottom: 1px solid #00008B;
 }
 nav a:link {
     color: #5c7fa3;
@@ -68,7 +60,7 @@ nav a:hover {
 }
 
 main {
-    margin-left: 190px;
+    grid-area: main;
     background-color: #FFFFFF;
     padding-top: 1px;
     padding-right: 20px;
@@ -80,8 +72,10 @@ main {
 main ul {
     list-style-image: url(marker.gif);
 }
+.hero {
+    grid-area: hero;
+}
 #homehero {
-    margin-left: 190px;
     height: 300px;
     background-image: url('coast2.jpg');
     background-repeat: no-repeat;
@@ -89,14 +83,12 @@ main ul {
     
 }
 #yurthero {
-    margin-left: 190px;
     height: 300px;
     background-image: url('yurt.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 #trailhero {
-    margin-left: 190px;
     height: 300px;
     background-image: url('trail.jpg');
     background-repeat: no-repeat;
@@ -104,8 +96,9 @@ main ul {
 }
 
 h1 {
-    font-size: 3em;
-    letter-spacing: .25em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    letter-spacing: 0.25em;
     font-family: Georgia, 'Times New Roman', serif;
     margin-bottom: 0;
     margin-top: 0;
@@ -134,11 +127,62 @@ dt {
     font-size: 90%;
 }
 footer {
-    margin-left: 190px;
+    grid-area: footer;
     background-color: #FFFFFF;
     padding: 2em;
     font-size: 75%;
     font-style: italic;
     text-align: center;
     font-family: Georgia, 'Times New Roman', serif;
+}
+@media screen and (min-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    nav li {
+        border-bottom: none;
+    }
+    .flow {
+        display: flex;
+        flex-direction: row;
+
+    }
+    section {
+        flex: 1;
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+}
+@media screen and (min-width: 1024px) {
+#wrapper {
+    display: grid;
+    grid-template-columns: 180px auto;
+    grid-template-rows: auto auto 300px; 
+    grid-template-areas:
+     "header header"
+     "nav hero"
+     "nav main"
+     "nav footer";
+    margin: auto;
+    width: 80%;
+    border: 1px solid #000033;
+    box-shadow: 3px 3px 3px #000033; 
+}
+nav {
+    text-align: left;
+    padding-top: 1em;
+}
+@supports (display: grid) {
+    nav ul {
+       flex-direction: column;
+       padding-left: 1em;
+    }
+}
 }
