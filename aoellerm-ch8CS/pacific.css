@@ -15,9 +15,9 @@ p {
 
 header {
     grid-area: header;
-    line-height: 100px; 
-    padding-left: 3em; 
+    height: 120px; 
     padding-top: 30px;
+    padding-left: 3em; 
     background-color: #002171; 
     color: #FFFFFF;
 }
