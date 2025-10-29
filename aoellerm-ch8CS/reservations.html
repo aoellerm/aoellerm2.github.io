@@ -9,7 +9,7 @@
     <body>
     <div id="wrapper">
    <header>
-      <h1><a href="activities.html">Pacific Trails Resort: Reservations</a></h1>
+      <h1><a href="reservations.html">Pacific Trails Resort: Reservations</a></h1>
    </header>
 
 <nav class="navbar">
@@ -25,7 +25,7 @@
    <h2>Reservations at Pacific Trails</h2>
     <h3>Contact Us Today!</h3>
     <p>Required fields are marked with an asterisk *</p>
-    
+
     <form method ="post" action="https://webdevbasics.net/scripts/pacific.php">
     <label for="myFName" >*First Name:</label>
     <input type="text" id="myFName" name="myFName" required>
@@ -37,19 +37,19 @@
     <input type="email" id="myEmail" name="myEmail" required>
 
     <label for="myPhone" >*Phone Number:</label>
-    <input type="tel" id="myPhone" name="myPhone" maxlength="12">
+    <input type="tel" id="myPhone" name="myPhone" maxlength="12" required>
     
     <label for="myDate" >*Arrival Date:</label>
     <input type="date" id="myDate" name="myDate" required>
     
     <label for="myNights" >*Nights:</label>
-    <input type="number" id="myNights" name="myNights" min="11" max="14">
+    <input type="number" id="myNights" name="myNights" min="1" max="14" required>
 
      <label for="myComments" >*Comments:</label>
      <textarea id="myComments" name="myComments" rows="2" cols="30"></textarea>
      <input type="submit" value="Submit">
-
     </form>
+
 <div id="contact">
    <span class = "resort"> Pacific Trails Resort </span> <br>
    12010 Pacific Trails Road <br>
